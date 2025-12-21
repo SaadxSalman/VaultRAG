@@ -12,6 +12,21 @@ Welcome to Pharma-RL, a groundbreaking project that harnesses the power of **rei
 
 ---
 
+---
+
+## 🛠️ Tech Stack
+
+-   **Core Simulation & Molecular Manipulation:** **Rust** 🦀 - Chosen for its performance, memory safety, and concurrency, making it ideal for computationally intensive molecular simulations.
+-   **Reinforcement Learning & Deep Learning:** **PyTorch** 🔥 - A flexible and powerful deep learning framework that provides the tools needed to build and train our complex RL and GNN models.
+-   **Decentralized Ledger:** **Solana** ☀️ - Utilized for its high throughput and low transaction costs, enabling an efficient and transparent log of successful drug candidates.
+-   **Web Interface & Dashboard (MERN Stack):**
+    -   **Frontend:** **Next.js** (React) with **TypeScript** - For a type-safe, high-performance user interface to visualize molecular structures and RL progress.
+    -   **Styling:** **Tailwind CSS** - A utility-first CSS framework for rapid and responsive UI development.
+    -   **Backend:** **Node.js** & **Express** - Handling API requests and orchestrating communication between the RL engine and the database.
+    -   **Database:** **MongoDB** - A flexible NoSQL database used to store historical training data, user configurations, and cached molecular properties.
+
+---
+
 ## ⚙️ Core Components
 
 ### Reinforcement Learning Framework
