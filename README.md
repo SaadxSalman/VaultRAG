@@ -75,3 +75,52 @@ Instructions on how to set up the project will be provided here. This will inclu
 
 ---
 
+This is the final, unified file structure for **Pharma-RL**. It follows a **monorepo** pattern, ensuring that your high-performance Rust logic, PyTorch AI, Solana programs, and MERN stack all work together seamlessly.
+
+## 📂 Complete File Structure
+
+```text
+pharma-rl/
+├── blockchain/                # Solana / Anchor Program
+│   ├── programs/
+│   │   └── pharma_log/
+│   │       ├── src/lib.rs     # On-chain logging logic
+│   │       └── Cargo.toml
+│   ├── tests/                 # Anchor integration tests
+│   └── Anchor.toml            # Deployment configurations
+├── core_engine/               # High-Performance Rust Simulation
+│   ├── src/
+│   │   ├── lib.rs             # PyO3 Bridge & Chemical logic
+│   │   └── mol_logic.rs       # Valency/Atom addition rules
+│   ├── Cargo.toml             # PyO3 and chemical crate deps
+│   └── pyproject.toml         # For maturin builds
+├── ml_service/                # PyTorch RL & GNN (Python)
+│   ├── models/
+│   │   ├── agent.py           # RL Policy (DQN/PPO)
+│   │   └── reward_gnn.py      # Property Prediction GNN
+│   ├── utils/
+│   │   ├── solana_client.py   # AnchorPy logging bridge
+│   │   └── graph_utils.py     # RDKit to PyG conversion
+│   ├── train.py               # MAIN TRAINING LOOP
+│   └── requirements.txt
+├── backend/                   # Node.js API (MERN)
+│   ├── src/
+│   │   ├── controllers/       # API logic
+│   │   ├── models/            # MongoDB Schemas (User/History)
+│   │   ├── routes/            # Express endpoints
+│   │   └── index.ts           # Server entry point
+│   ├── package.json
+│   └── .env                   # DB_URI, SOLANA_RPC_URL
+└── frontend/                  # Next.js Dashboard
+    ├── src/
+    │   ├── components/        # 3D Molecule Viewers & UI
+    │   ├── hooks/             # useSolanaMolecules.ts
+    │   ├── pages/             # Dashboard & Live Feed
+    │   └── styles/            # Tailwind CSS
+    ├── public/
+    │   └── idl.json           # Symlinked from blockchain/target
+    └── package.json
+
+```
+
+---
