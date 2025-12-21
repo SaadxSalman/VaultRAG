@@ -58,9 +58,29 @@ To ensure transparency and create a verifiable record of our findings, we use th
 
 ## 🛠️ Tech Stack
 
--   **Core Simulation & Molecular Manipulation:** **Rust** 🦀 - Chosen for its performance, memory safety, and concurrency, making it ideal for computationally intensive molecular simulations.
--   **Reinforcement Learning & Deep Learning:** **PyTorch** 🔥 - A flexible and powerful deep learning framework that provides the tools needed to build and train our complex RL and GNN models.
--   **Decentralized Ledger:** **Solana** ☀️ - Utilized for its high throughput and low transaction costs, enabling an efficient and transparent log of successful drug candidates.
+* **Core Simulation & Molecular Manipulation:** **Rust** 🦀
+* Chosen for its performance and memory safety, handling high-speed chemical valency validation.
+* **PyO3 & Maturin:** Used to bridge Rust logic into Python as a high-performance native module.
+* **RDKit (Rust Bindings):** For advanced cheminformatics and molecular coordinate generation.
+
+
+* **Reinforcement Learning & Deep Learning:** **PyTorch** 🔥
+* **RL Algorithms:** Implementation of DQN/PPO agents for molecular graph construction.
+* **Graph Neural Networks (GNN):** Utilizing **PyTorch Geometric** to create molecular embeddings and dynamic reward functions (Property Prediction).
+
+
+* **Decentralized Ledger:** **Solana** ☀️
+* **Anchor Framework:** Used to develop secure eDSL programs (smart contracts) for molecular logging.
+* **Transparency:** Provides an immutable, timestamped record of discovery with high throughput and low transaction fees.
+
+
+* **Web Interface & Dashboard (MERN Stack):**
+* **Frontend:** **Next.js** (React) with **TypeScript** - A type-safe UI for real-time RL progress tracking.
+* **3D Visualization:** **3Dmol.js** integration for interactive WebGL molecular rendering.
+* **Styling:** **Tailwind CSS** - Utility-first CSS for a responsive, modern laboratory dashboard.
+* **Backend:** **Node.js** & **Express** - Orchestrating the flow between the Python ML service, MongoDB, and the Solana Devnet.
+* **Database:** **MongoDB** - Storing training metadata, user configurations, and caching blockchain transaction history.
+
 
 ---
 
@@ -124,3 +144,4 @@ pharma-rl/
 ```
 
 ---
+
