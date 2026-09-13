@@ -1,0 +1,14 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+python-multipart>=0.0.9
+pydantic-settings>=2.5.0
+numpy>=1.26.0
+scikit-learn>=1.5.0
+PyMuPDF>=1.24.0
+python-docx>=1.1.2
+pytest>=8.3.0
+# Optional accelerator path. The service has a deterministic local fallback.
+faiss-cpu>=1.8.0; platform_system != "Windows" or platform_machine != "ARM64"
+sentence-transformers>=3.1.0
+transformers>=4.45.0
+torch>=2.4.0

@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.db
+data/index/
+data/uploads/
+data/logs/
+node_modules/
+dist/
+src-tauri/target/
+.idea/
+.vscode/*.code-snippets

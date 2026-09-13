@@ -1,0 +1,9 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "VaultRAG",
+  "version": "0.1.0",
+  "identifier": "com.vaultrag.desktop",
+  "build": { "beforeDevCommand": "npm run dev", "devUrl": "http://localhost:1420", "beforeBuildCommand": "npm run build", "frontendDist": "../dist" },
+  "app": { "windows": [{ "title": "VaultRAG - Private Intelligence", "width": 1320, "height": 860, "minWidth": 980, "minHeight": 680, "resizable": true }], "security": { "csp": "default-src 'self' http://127.0.0.1:8765; connect-src 'self' http://127.0.0.1:8765; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com" } },
+  "bundle": { "active": true, "targets": "all", "icon": ["icons/icon.ico", "icons/icon.icns", "icons/icon.png"] }
+}
